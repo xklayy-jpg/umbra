@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>UMBRA — AI Digital Systems Studio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Umbra is an AI digital systems studio crafting cinematic websites and intelligent automation for modern brands."
+    />
+
+    <!-- Canonical URL for SEO; replace with your production domain -->
+    <link rel="canonical" href="https://umbra.example" />
+
+    <!-- Basic CSP as a fallback; primary policy is set via vercel.json headers -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' https://unpkg.com https://plausible.io; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' https://images.pexels.com data:; connect-src 'self' https://plausible.io https://prod.spline.design; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests"
+    />
+
+    <!-- Font: Inter with system fallbacks -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Core styles for Umbra v2 -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- OpenGraph / social preview -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="UMBRA — AI Digital Systems Studio" />
+    <meta
+      property="og:description"
+      content="Cinematic digital systems, intelligent automation, and AI-native experiences for modern brands."
+    />
+    <meta property="og:url" content="https://umbra.example" />
+    <meta property="og:image" content="https://umbra.example/og-image.png" />
+
+    <!-- Twitter cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="UMBRA — AI Digital Systems Studio" />
+    <meta
+      name="twitter:description"
+      content="Cinematic digital systems, intelligent automation, and AI-native experiences for modern brands."
+    />
+    <meta name="twitter:image" content="https://umbra.example/og-image.png" />
+
+    <!-- JSON-LD structured data for the studio -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Umbra — AI Digital Systems Studio",
+        "url": "https://umbra.example",
+        "description": "Umbra is an AI digital systems studio crafting cinematic websites and intelligent automation for modern brands.",
+        "logo": "https://umbra.example/logo.png"
+      }
+    </script>
+
+    <!-- Privacy-friendly analytics (Plausible)
+         Replace data-domain with your production domain, e.g. data-domain="umbra.studio"
+    -->
+    <script
+      defer
+      data-domain="umbra.example"
+      src="https://plausible.io/js/script.js"
+    ></script>
+  </head>
+  <body>
+    <div class="page">
+      <header class="site-header">
+        <div class="site-header-inner">
+          <a href="#top" class="brand">
+            <span class="brand-mark"></span>
+            <span class="brand-text">UMBRA</span>
+          </a>
+          <nav class="site-nav">
+            <a href="#services">Services</a>
+            <a href="#portfolio">Work</a>
+            <a href="#clients">Clients</a>
+            <a href="#insights">Insights</a>
+            <a href="#contact">Contact</a>
+          </nav>
+        </div>
+      </header>
+
+      <main id="top">
+        <!-- HERO -->
+        <section class="hero" aria-labelledby="hero-title">
+          <div class="hero-background">
+            <div class="hero-stars"></div>
+            <div class="hero-gradient"></div>
+            <div class="hero-vignette"></div>
+            <div class="hero-lensflare"></div>
+          </div>
+
+          <div class="hero-inner">
+            <div class="hero-top">
+              <div class="hero-logo-wrap">
+                <h1 id="hero-title" class="hero-logo">
+                  UMBRA
+                </h1>
+                <p class="hero-subtitle">
+                  AI Digital Systems Studio — Modern Websites &amp; Intelligent Automation
+                </p>
+              </div>
+            </div>
+
+            <div class="hero-middle">
+              <!-- Spline moon hero canvas
+                   See main.js for Spline runtime integration and scroll-based lighting.
+              -->
+              <div class="moon-shell">
+                <canvas
+                  id="moonCanvas"
+                  class="moon-canvas"
+                  aria-label="Cinematic 3D rendering of the Moon"
+                ></canvas>
+                <!-- Static fallback for no-JS / Spline failures -->
+                <div class="moon-fallback" aria-hidden="true"></div>
+              </div>
+            </div>
+
+            <div class="hero-bottom">
+              <div class="hero-cta-wrap">
+                <a
+                  href="#contact"
+                  class="btn btn-primary hero-cta"
+                  data-analytics="start-project"
+                >
+                  Start a Project →
+                </a>
+                <p class="hero-caption">
+                  High-end digital systems, crafted with cinematic precision.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SERVICES -->
+        <section id="services" class="section section-services">
+          <div class="section-inner">
+            <header class="section-header">
+              <p class="eyebrow">Capabilities</p>
+              <h2 class="section-title">Systems for the next decade of digital.</h2>
+              <p class="section-description">
+                Umbra designs and engineers AI-native experiences — from cinematic marketing
+                sites to intelligent internal tools that quietly automate the work behind
+                your brand.
+              </p>
+            </header>
+
+            <div class="services-grid">
+              <article class="service-card">
+                <h3>AI‑Native Web Experiences</h3>
+                <p>
+                  Minimal, cinematic interfaces with realtime personalization, storytelling
+                  and motion built directly into the system — not bolted on.
+                </p>
+                <ul>
+                  <li>High-fidelity 3D &amp; motion</li>
+                  <li>Ultra-fast, edge-optimized builds</li>
+                  <li>Analytics-aware experience design</li>
+                </ul>
+              </article>
+
+              <article class="service-card">
+                <h3>Intelligent Automation</h3>
+                <p>
+                  Invisible workflows that handle qualification, onboarding, and support —
+                  seamlessly integrated into your existing stack.
+                </p>
+                <ul>
+                  <li>AI agents &amp; orchestration</li>
+                  <li>CRM &amp; data-layer integration</li>
+                  <li>Hybrid human-in-the-loop flows</li>
+                </ul>
+              </article>
+
+              <article class="service-card">
+                <h3>Foundational Design Systems</h3>
+                <p>
+                  Cohesive visual languages and component libraries that scale from landing
+                  pages to full platforms without visual debt.
+                </p>
+                <ul>
+                  <li>Tokenized design systems</li>
+                  <li>Framer &amp; React libraries</li>
+                  <li>Living documentation &amp; guidelines</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- PORTFOLIO -->
+        <section id="portfolio" class="section section-portfolio">
+          <div class="section-inner">
+            <header class="section-header">
+              <p class="eyebrow">Selected Directions</p>
+              <h2 class="section-title">Cinematic systems for ambitious teams.</h2>
+              <p class="section-description">
+                Conceptual explorations of AI-driven brands — each example is an AI-generated
+                direction translated into production-grade layouts.
+              </p>
+            </header>
+
+            <div class="portfolio-grid">
+              <!-- Replace images with AI-generated or free-stock assets that fit Umbra -->
+              <article class="portfolio-item" data-analytics="portfolio-item">
+                <div class="portfolio-media">
+                  <img
+                    src="https://images.pexels.com/photos/3130810/pexels-photo-3130810.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                    alt="Futuristic interface for a neural research brand"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="portfolio-meta">
+                  <h3>Neural Research Lab</h3>
+                  <p>Cinematic brand site with realtime, AI-curated case studies.</p>
+                  <span class="tag">Web Experience</span>
+                </div>
+              </article>
+
+              <article class="portfolio-item" data-analytics="portfolio-item">
+                <div class="portfolio-media">
+                  <img
+                    src="https://images.pexels.com/photos/34092/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1200"
+                    alt="Minimalist architecture at night representing a fintech brand"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="portfolio-meta">
+                  <h3>Silent Fintech</h3>
+                  <p>Apple-level minimalism for a high-trust financial platform.</p>
+                  <span class="tag">Product Marketing</span>
+                </div>
+              </article>
+
+              <article class="portfolio-item" data-analytics="portfolio-item">
+                <div class="portfolio-media">
+                  <img
+                    src="https://images.pexels.com/photos/34088/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1200"
+                    alt="Abstract data cityscape for an AI operations platform"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="portfolio-meta">
+                  <h3>Umbra Ops</h3>
+                  <p>AI operations hub with adaptive layouts driven by telemetry.</p>
+                  <span class="tag">Platform Design</span>
+                </div>
+              </article>
+
+              <article class="portfolio-item" data-analytics="portfolio-item">
+                <div class="portfolio-media">
+                  <img
+                    src="https://images.pexels.com/photos/2387863/pexels-photo-2387863.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                    alt="Soft glowing gradient environment for a wellness brand"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="portfolio-meta">
+                  <h3>Quiet Wellness</h3>
+                  <p>Sensory digital rituals with adaptive, mood-aware visuals.</p>
+                  <span class="tag">AI Experience</span>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- CLIENTS -->
+        <section id="clients" class="section section-clients">
+          <div class="section-inner">
+            <header class="section-header section-header-center">
+              <p class="eyebrow">Trusted by teams who care about the details</p>
+              <h2 class="section-title">Built for founders &amp; product leaders.</h2>
+            </header>
+
+            <div class="client-row">
+              <div class="client-pill">LUNAR SYSTEMS</div>
+              <div class="client-pill">APEX QUANT</div>
+              <div class="client-pill">KINETIC CLOUD</div>
+              <div class="client-pill">PARALLAX LABS</div>
+            </div>
+
+            <p class="clients-footnote">
+              Names shown are placeholders. Swap these with your own monochrome vector
+              marks for maximum polish.
+            </p>
+          </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="section section-contact">
+          <div class="section-inner section-contact-inner">
+            <div class="contact-copy">
+              <p class="eyebrow">Start a project</p>
+              <h2 class="section-title">Tell us about the system you wish existed.</h2>
+              <p class="section-description">
+                Share your timeline, constraints, and the moment you want people to feel
+                when they first land on your site. We’ll respond with a short perspective,
+                not a sales deck.
+              </p>
+            </div>
+
+            <div class="contact-form-shell">
+              <!-- Contact form posts to /api/contact (Vercel serverless function).
+                   Client-side validation + sanitization lives in main.js.
+              -->
+              <form id="contact-form" class="contact-form" method="post" novalidate>
+                <!-- Honeypot field to catch bots; hidden via CSS -->
+                <div class="field honeypot-field">
+                  <label for="website">Leave this field empty</label>
+                  <input id="website" name="website" type="text" autocomplete="off" />
+                </div>
+
+                <div class="field">
+                  <label for="name">Name</label>
+                  <input id="name" name="name" type="text" autocomplete="name" required />
+                </div>
+
+                <div class="field">
+                  <label for="email">Email</label>
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    autocomplete="email"
+                    required
+                  />
+                </div>
+
+                <div class="field field-half">
+                  <label for="company">Company</label>
+                  <input
+                    id="company"
+                    name="company"
+                    type="text"
+                    autocomplete="organization"
+                  />
+                </div>
+
+                <div class="field field-half">
+                  <label for="budget">Approximate budget (USD)</label>
+                  <select id="budget" name="budget">
+                    <option value="">Select a range</option>
+                    <option value="25-50">25k – 50k</option>
+                    <option value="50-100">50k – 100k</option>
+                    <option value="100-250">100k – 250k</option>
+                    <option value="250+">250k+</option>
+                  </select>
+                </div>
+
+                <div class="field">
+                  <label for="timeline">Timeline</label>
+                  <input
+                    id="timeline"
+                    name="timeline"
+                    type="text"
+                    placeholder="e.g. Kickoff in May, launch by Q4"
+                  />
+                </div>
+
+                <div class="field">
+                  <label for="message">What are you building?</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    placeholder="Share context, links, and what success looks like."
+                    required
+                  ></textarea>
+                </div>
+
+                <!-- Filled automatically by the AI assistant component -->
+                <input
+                  type="hidden"
+                  id="aiSummaryField"
+                  name="aiSummary"
+                  value=""
+                />
+
+                <button type="submit" class="btn btn-primary btn-full" data-analytics="form-submit">
+                  Submit Inquiry
+                </button>
+                <p class="form-footnote">
+                  No newsletters. No drip campaigns. Just one considered response from the
+                  team.
+                </p>
+                <p class="form-status" id="form-status" aria-live="polite"></p>
+              </form>
+            </div>
+          </div>
+        </section>
+
+        <!-- Minimal AI lead-qualification assistant.
+             Gathers structured answers and writes a summary into the hidden aiSummaryField.
+        -->
+        <section class="section section-ai-assistant">
+          <div class="section-inner ai-assistant-inner">
+            <aside class="ai-assistant" id="ai-assistant">
+              <button
+                type="button"
+                class="ai-toggle"
+                aria-expanded="false"
+                aria-controls="ai-assistant-panel"
+              >
+                Project scoping assistant
+              </button>
+              <div class="ai-panel" id="ai-assistant-panel" hidden>
+                <div class="ai-intro">
+                  <p>
+                    A tiny helper to structure your project brief. Answers are private and
+                    included with your contact form.
+                  </p>
+                </div>
+                <div class="ai-steps">
+                  <div class="ai-question">
+                    <label for="ai-goal">What are you trying to achieve?</label>
+                    <textarea
+                      id="ai-goal"
+                      rows="2"
+                      placeholder="e.g. Reposition our brand with a cinematic site and automate lead qualification."
+                    ></textarea>
+                  </div>
+                  <div class="ai-question">
+                    <label for="ai-audience">Who is this for?</label>
+                    <textarea
+                      id="ai-audience"
+                      rows="2"
+                      placeholder="e.g. Seed–Series B founders and product leaders in fintech."
+                    ></textarea>
+                  </div>
+                  <div class="ai-question">
+                    <label for="ai-constraints">Constraints or non‑negotiables?</label>
+                    <textarea
+                      id="ai-constraints"
+                      rows="2"
+                      placeholder="e.g. Launch date, brand constraints, integrations, regions."
+                    ></textarea>
+                  </div>
+                </div>
+                <button type="button" class="btn ai-generate">
+                  Generate project summary
+                </button>
+                <p class="ai-summary-label">Draft summary (will be sent with your form):</p>
+                <div class="ai-summary" id="ai-summary" aria-live="polite"></div>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <!-- INSIGHTS / BLOG PREVIEW -->
+        <section id="insights" class="section section-portfolio">
+          <div class="section-inner">
+            <header class="section-header">
+              <p class="eyebrow">Insights</p>
+              <h2 class="section-title">Thinking in systems, not pages.</h2>
+              <p class="section-description">
+                Longer-form notes on AI-native design, automation, and the mechanics of
+                building cinematic digital systems.
+              </p>
+            </header>
+            <div id="insights-preview"></div>
+            <div id="insights-article" class="section-inner" aria-live="polite"></div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="site-footer-inner">
+          <span>© <span id="year"></span> Umbra Studio. All rights reserved.</span>
+          <span class="footer-meta">Built with Spline · Designed for Framer &amp; Vercel</span>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Main interactions, Spline integration, and analytics hooks -->
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
+
