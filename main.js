@@ -1,32 +1,16 @@
-// main.js — Umbra v3 entry point
-
-import { initHero } from './heroSystem.js';
-import { initAnimations } from './animationEngine.js';
-import { initInteractions } from './interactionEngine.js';
-import { initContact } from './contactSystem.js';
-import { initAILead } from './aiLeadSystem.js';
-import { initAnalytics } from './analytics.js';
-import { initMonitoring } from './monitoring.js';
-import { initBlog } from './blogSystem.js';
-import { initCMS } from './cmsClient.js';
-import { cmsConfig } from './cmsConfig.js';
-import { staticContent } from './staticContent.js';
-
-function initFooterYear() {
+// main.js
+document.addEventListener('DOMContentLoaded', () => {
+  // Footer year
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
-}
 
-document.addEventListener('DOMContentLoaded', () => {
-  initFooterYear();
-  initHero();
-  initAnimations();
-  initInteractions();
-  initContact();
-  initAILead();
-  initAnalytics();
-  initMonitoring();
-  initBlog();
-  initCMS(cmsConfig);
-  staticContent();
+  // Hero fallback if Spline not loaded
+  const canvas = document.getElementById('moonCanvas');
+  const fallback = document.querySelector('.moon-fallback');
+  if (canvas) console.log('Spline hero would load here');
+  if (fallback) fallback.style.display = 'block';
+
+  // Simple scroll reveal (optional)
+  const sections = document.querySelectorAll('section');
+  sections.forEach((sec) => sec.classList.add('visible'));
 });
