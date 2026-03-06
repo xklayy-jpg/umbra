@@ -1,58 +1,32 @@
-// Umbra v3 main orchestrator.
-// This file wires together modular systems without changing the visual output:
-// - Hero system (Spline moon, scroll-driven lighting)
-// - Animation engine (section reveal)
-// - Interaction engine (smooth scroll, magnetic buttons, parallax)
-// - Contact + AI lead intelligence
-// - Analytics and monitoring hooks
+// main.js — Umbra v3 entry point
 
-import { initSectionReveal } from "./js/animationEngine.js";
-import {
-  initSmoothAnchors,
-  initMagneticButtons,
-  initHeroParallax
-} from "./js/interactionEngine.js";
-import { initHeroSystem } from "./js/heroSystem.js";
-import { initContactForm } from "./js/contactSystem.js";
-import { initAiLeadAssistant } from "./js/aiLeadSystem.js";
-import { initAnalyticsClickTracking } from "./js/analytics.js";
-import { initMonitoring } from "./js/monitoring.js";
-import { hydrateCmsContent } from "./js/cmsClient.js";
-import { initBlogPreview } from "./js/blogSystem.js";
+import { initHero } from './heroSystem.js';
+import { initAnimations } from './animationEngine.js';
+import { initInteractions } from './interactionEngine.js';
+import { initContact } from './contactSystem.js';
+import { initAILead } from './aiLeadSystem.js';
+import { initAnalytics } from './analytics.js';
+import { initMonitoring } from './monitoring.js';
+import { initBlog } from './blogSystem.js';
+import { initCMS } from './cmsClient.js';
+import { cmsConfig } from './cmsConfig.js';
+import { staticContent } from './staticContent.js';
 
-function initYear() {
-  const el = document.getElementById("year");
-  if (el) {
-    el.textContent = new Date().getFullYear().toString();
-  }
+function initFooterYear() {
+  const yearEl = document.getElementById('year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
 }
 
-function init() {
-  initYear();
-
-  // Animation + interaction engines.
-  initSectionReveal();
-  initSmoothAnchors();
-  initMagneticButtons();
-  initHeroParallax();
-
-  // Systems.
-  initHeroSystem();
-  initContactForm();
-  initAiLeadAssistant();
-  initAnalyticsClickTracking();
+document.addEventListener('DOMContentLoaded', () => {
+  initFooterYear();
+  initHero();
+  initAnimations();
+  initInteractions();
+  initContact();
+  initAILead();
+  initAnalytics();
   initMonitoring();
-  initBlogPreview();
-
-  // Optional: hydrate content from a headless CMS if configured.
-  hydrateCmsContent().catch((error) =>
-    console.error("CMS content hydration failed, falling back to static markup.", error)
-  );
-}
-
-if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", init);
-} else {
-  init();
-}
-
+  initBlog();
+  initCMS(cmsConfig);
+  staticContent();
+});
