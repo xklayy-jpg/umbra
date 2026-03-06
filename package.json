@@ -1,17 +1,11 @@
 {
   "name": "umbra-site",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
-    "dev": "npx serve .",
-    "build": "echo \"Static site - no build step\"",
-    "lint": "eslint . --ext .js",
-    "format": "prettier . --write"
+    "dev": "vercel dev",
+    "build": "echo 'Static site - no build step'"
   },
-  "devDependencies": {
-    "eslint": "^9.0.0",
-    "eslint-config-prettier": "^9.0.0",
-    "prettier": "^3.2.0"
-  }
+  "dependencies": {}
 }
-
